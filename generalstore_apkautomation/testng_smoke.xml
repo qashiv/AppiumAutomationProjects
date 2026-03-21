@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<groups>
+		<run>
+			<include name="Smoke"></include>
+		</run>
+	</groups>
+	
+	<listeners>
+		<listener class-name="org.qa.generalstore.testutils.Listeners"></listener>
+	</listeners>
+
+	<test thread-count="5" name="HomepageValidation">
+		<classes>
+			<class name="com.qa.generalstore_apkautomation.GeneralStoreApk" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="PurchaseItems">
+		<classes>
+			<class
+				name="com.qa.generalstore_apkautomation.GeneralStoreApk_Hybrid" />
+		</classes>
+	</test>
+</suite> <!--
+Suite -->
